@@ -26,6 +26,14 @@ Este é o repositório do projeto **DSList**, uma API RESTful desenvolvida em **
 
 ---
 
+## **Recursos Incluídos**
+
+- **Collection do Postman**: Arquivo `DSList.postman_collection.json` com todas as requisições para testar a API.
+- **Docker Compose**: Arquivo `docker-compose.yml` para configurar o ambiente com PostgreSQL e pgAdmin.
+- **Script de Criação do Banco de Dados**: Arquivo `create.sql` com o script SQL para criar as tabelas e popular o banco de dados.
+
+---
+
 ## **Estrutura do Projeto**
 
 O projeto segue o padrão de camadas:
@@ -85,6 +93,30 @@ Para configurar o ambiente com Docker, utilize o arquivo `docker-compose.yml` di
    ./mvnw spring-boot:run
    ```
 4. Acesse os endpoints via Postman ou navegador.
+
+---
+
+## **Testando a API com Postman**
+
+- Importe a collection `DSList.postman_collection.json` no Postman.
+- Execute as requisições para testar todos os endpoints da API.
+
+---
+
+## **Configuração do Ambiente com Docker**
+
+1. Execute o comando abaixo para subir os contêineres do PostgreSQL e pgAdmin:
+   ```bash
+   docker-compose up -d
+   ```
+2. Acesse o pgAdmin em `http://localhost:5050` e configure a conexão com o PostgreSQL.
+
+---
+
+## **Criação do Banco de Dados**
+
+- Utilize o script `create.sql` para criar as tabelas e popular o banco de dados com dados iniciais.
+- Execute o script no PostgreSQL ou no H2, dependendo do ambiente.
 
 ---
 
